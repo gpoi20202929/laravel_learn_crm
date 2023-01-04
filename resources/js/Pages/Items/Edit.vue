@@ -1,9 +1,9 @@
 <script setup>
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
-import { Head } from "@inertiajs/inertia-vue3";
-import { reactive } from "vue";
-import { Inertia } from "@inertiajs/inertia";
-import ValidatiuonErrors from "@/Components/ValidationErrors.vue";
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import { Head } from '@inertiajs/inertia-vue3';
+import { reactive } from 'vue';
+import { Inertia } from '@inertiajs/inertia';
+import ValidatiuonErrors from '@/Components/ValidationErrors.vue';
 
 const props = defineProps({
   item: Object,
@@ -18,7 +18,7 @@ const form = reactive({
 });
 
 const updateItem = (id) => {
-  Inertia.put(route("items.update", { item: id }), form);
+  Inertia.put(route('items.update', { item: id }), form);
 };
 </script>
 
@@ -42,9 +42,7 @@ const updateItem = (id) => {
                     <div class="flex flex-wrap -m-2">
                       <div class="p-2 w-full">
                         <div class="relative">
-                          <label for="name" class="leading-7 text-sm text-gray-600"
-                            >商品名</label
-                          >
+                          <label for="name" class="leading-7 text-sm text-gray-600">商品名</label>
                           <input
                             type="text"
                             id="name"
@@ -56,9 +54,7 @@ const updateItem = (id) => {
                       </div>
                       <div class="p-2 w-full">
                         <div class="relative">
-                          <label for="memo" class="leading-7 text-sm text-gray-600"
-                            >メモ</label
-                          >
+                          <label for="memo" class="leading-7 text-sm text-gray-600">メモ</label>
                           <textarea
                             id="memo"
                             name="memo"
@@ -69,9 +65,7 @@ const updateItem = (id) => {
                       </div>
                       <div class="p-2 w-full">
                         <div class="relative">
-                          <label for="price" class="leading-7 text-sm text-gray-600"
-                            >価格</label
-                          >
+                          <label for="price" class="leading-7 text-sm text-gray-600">価格</label>
                           <input
                             type="number"
                             id="price"
