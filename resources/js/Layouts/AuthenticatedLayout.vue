@@ -36,6 +36,12 @@ const showingNavigationDropdown = ref(false);
                 >
                   購入管理
                 </NavLink>
+                <NavLink
+                  :href="route('purchases.index')"
+                  :active="route().current('purchases.index')"
+                >
+                  購買履歴
+                </NavLink>
                 <NavLink :href="route('items.index')" :active="route().current('items.index')">
                   商品管理
                 </NavLink>
